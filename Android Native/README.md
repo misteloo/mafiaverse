@@ -1,2 +1,4 @@
 - DaggerHilt injection
 - Socket io
+- Retrofit
+- Coroutines
