@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".game.nato.NatoFragment">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.1"
+        android:scaleType="fitXY"
+        android:src="@drawable/game_background_texture"
+        app:layout_constraintBottom_toBottomOf="@+id/layerAnimEvent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layerAnimMsg" />
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/layerAnimMsg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        app:layoutDescription="@xml/fragment_nato_xml_animmicopen_scene"
+        app:layout_constraintBottom_toTopOf="@+id/frameGameEventHolder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardMicOpen"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_46sdp"
+            app:cardBackgroundColor="@color/backgroundBSColor"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="میکروفون دست شماست میتوانید صحبت کنید"
+                    android:textColor="@color/textMainColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSimpleMsg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_46sdp"
+            app:cardBackgroundColor="@color/backgroundBSColor"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/txtMsg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/textMainColor" />
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+    <ImageView
+        android:id="@+id/imgMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:padding="@dimen/_4sdp"
+        android:src="@drawable/round_menu_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/cardRootMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:elevation="10dp"
+        app:cardBackgroundColor="@color/grey600"
+        app:cardCornerRadius="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="@+id/imgMenu"
+        app:layout_constraintTop_toBottomOf="@+id/imgMenu">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_4sdp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/round_record_voice_over_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:text="لیست صحبت"
+                    android:textColor="@color/textMainColor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_4sdp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_hat_white"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:text="لیست مافیا"
+                    android:textColor="@color/textMainColor" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imgGameEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgMenu"
+        app:layout_constraintEnd_toStartOf="@+id/imgMenu"
+        app:layout_constraintTop_toTopOf="@+id/imgMenu" />
+
+    <ImageView
+        android:id="@+id/imgCharacter"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="@+id/guideline42"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/txtCharacter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:textColor="@color/textMainColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imgCharacter"
+        app:layout_constraintStart_toEndOf="@+id/imgCharacter"
+        app:layout_constraintTop_toTopOf="@+id/imgCharacter"
+        tools:text="شهروند" />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/timeLeft"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        app:cpb_background_progressbar_color="@android:color/transparent"
+        app:cpb_progressbar_color="@color/red500"
+        app:cpb_round_border="true"
+        app:layout_constraintBottom_toBottomOf="@+id/imgCharacter"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/imgCharacter"
+        tools:cpb_progress="65"
+        tools:cpb_progress_max="100" />
+
+    <ImageView
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/image_timer"
+        app:layout_constraintBottom_toBottomOf="@+id/timeLeft"
+        app:layout_constraintEnd_toEndOf="@+id/timeLeft"
+        app:layout_constraintStart_toStartOf="@+id/timeLeft"
+        app:layout_constraintTop_toTopOf="@+id/timeLeft" />
+
+    <FrameLayout
+        android:id="@+id/frameGun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imgMenu"
+        app:layout_constraintEnd_toStartOf="@+id/imgGameEvent"
+        app:layout_constraintTop_toTopOf="@+id/imgMenu">
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/progressGun"
+            android:layout_width="@dimen/_34sdp"
+            android:layout_height="@dimen/_34sdp"
+            android:layout_gravity="center_horizontal"
+            app:cpb_background_progressbar_color="@color/backgroundMainColor"
+            app:cpb_progress_max="10"
+            app:cpb_progressbar_color="@color/red500"
+            app:cpb_round_border="true"
+            app:layout_constraintBottom_toBottomOf="@+id/imgMenu"
+            app:layout_constraintEnd_toStartOf="@+id/imgGameEvent"
+            app:layout_constraintTop_toTopOf="@+id/imgMenu" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardGun"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:elevation="@dimen/_10sdp"
+            android:focusable="true"
+            android:foreground="?selectableItemBackground"
+            app:cardBackgroundColor="@color/grey300"
+            app:cardCornerRadius="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/progressGun"
+            app:layout_constraintEnd_toEndOf="@+id/progressGun"
+            app:layout_constraintStart_toStartOf="@+id/progressGun"
+            app:layout_constraintTop_toTopOf="@+id/progressGun">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_4sdp"
+                android:rotationY="180"
+                android:src="@drawable/pistole" />
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+
+    <Space
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCharacter" />
+
+    <FrameLayout
+        android:id="@+id/frameGameEventHolder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <include
+            android:id="@+id/layerModerator"
+            layout="@layout/layer_moderator_in_game"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/layoutDayAndVote"
+            layout="@layout/layer_nato_day_vote"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/layerChaos"
+            layout="@layout/layer_chaos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/layerAnimEvent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutDescription="@xml/fragment_nato_xml_layeranimparent_scene"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3">
+
+        <include
+            android:id="@+id/layerAnimVote"
+            layout="@layout/layer_nato_anim_vote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <include
+            android:id="@+id/layerAnimAction"
+            layout="@layout/layer_nato_anim_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <include
+            android:id="@+id/layerAnimSpeech"
+            layout="@layout/layer_nato_anim_speech"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <include
+            android:id="@+id/layerAnimNightAction"
+            layout="@layout/layer_nato_anim_night_ability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <include
+            android:id="@+id/layerAnimModerator"
+            layout="@layout/layer_nato_anim_moderator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <include
+            android:id="@+id/layerAnimDead"
+            layout="@layout/layer_anim_dead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+</androidx.constraintlayout.widget.ConstraintLayout>

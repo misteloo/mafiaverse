@@ -1,0 +1,194 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.dagger.hilt.android'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'com.google.gms.google-services'
+    id "kotlin-parcelize"
+    id 'com.google.firebase.crashlytics'
+    id 'kotlin-kapt'
+
+}
+
+android {
+    namespace 'ir.greendex.mafia'
+    compileSdk 34
+    defaultConfig {
+        applicationId "ir.greendex.mafia"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        def marketApplicationId = "ir.mservices.market"
+        def marketBindAddress = "ir.mservices.market.InAppBillingService.BIND"
+        manifestPlaceholders = [marketApplicationId: "${marketApplicationId}",
+                                marketBindAddress  : "${marketBindAddress}",
+                                marketPermission   : "${marketApplicationId}.BILLING"]
+        buildConfigField 'String', 'MYKET_IAB_PUBLIC_KEY', "\"{$myket_public_rsa}\""
+    }
+
+
+    buildFeatures {
+        buildConfig = true
+    }
+    signingConfigs {
+        release {
+            storeFile file('E://mistelo.jks')
+            storePassword 'Mistelo4400233618'
+            keyAlias 'haddadi'
+            keyPassword 'Mistelo'
+        }
+    }
+
+    buildTypes {
+        
+        release {
+            signingConfig signingConfigs.release
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            
+
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.2"
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    buildFeatures {
+        viewBinding = true
+        compose = true
+    }
+    hilt {
+        enableAggregatingTask = true
+    }
+}
+
+dependencies {
+    // adivery
+    implementation 'com.adivery:sdk:4.6.5'
+    // compose
+    debugImplementation("androidx.compose.ui:ui-tooling")
+    debugImplementation('androidx.compose.ui:ui-test-manifest:1.5.4')
+    implementation("androidx.activity:activity-compose:1.8.1")
+    implementation(platform('androidx.compose:compose-bom:2023.10.01'))
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-graphics")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+
+    // flip
+    implementation 'com.wajahatkarim:EasyFlipView:3.0.3'
+    // poolaky
+    implementation "com.github.cafebazaar.Poolakey:poolakey:2.1.0"
+    // qr code
+    implementation 'com.github.yuriy-budiyev:code-scanner:2.3.2'
+    // flex
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    // count down timer
+    implementation 'ir.samanjafari.easycountdowntimer:easycountdowntimer:2.5.0'
+    // lucky wheel
+    implementation 'com.github.mmoamenn:LuckyWheel_Android:0.3.0'
+    // room
+    implementation "androidx.room:room-runtime:2.6.1"
+    implementation "androidx.room:room-paging:2.6.1"
+    kapt "androidx.room:room-compiler:2.6.1"
+
+    androidTestImplementation "androidx.room:room-testing:2.6.1"
+
+    implementation 'com.github.samanzamani:PersianDate:1.7.1'
+    // Import the Firebase BoM
+    implementation(platform('com.google.firebase:firebase-bom:32.6.0'))
+    // crash
+    implementation('com.google.firebase:firebase-crashlytics:18.6.0')
+    implementation('com.google.firebase:firebase-analytics:21.5.0')
+    // Add the dependency for the Firebase SDK for Google Analytics
+    implementation('com.google.firebase:firebase-analytics-ktx:21.5.0')
+    implementation('com.google.firebase:firebase-messaging-ktx:23.4.0')
+    // data store
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+    // shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    // glide
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+    // circle progress bar
+    implementation 'com.mikhaellopez:circularprogressbar:3.1.0'
+    // bottom nav
+    implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.9'
+    // blur
+    implementation 'jp.wasabeef:blurry:4.0.1'
+    //flexbox
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    // live kit
+    implementation 'io.livekit:livekit-android:1.5.3'
+
+    //datastore
+    implementation 'androidx.datastore:datastore-preferences:1.0.0'
+
+    //lottie anim
+    implementation 'com.airbnb.android:lottie:6.2.0'
+
+    //lifecycle
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.2'
+    //noinspection LifecycleAnnotationProcessorWithJava8
+    kapt "androidx.lifecycle:lifecycle-compiler:2.6.2"
+
+    //viewModel
+    implementation 'androidx.activity:activity-ktx:1.8.1'
+
+    //coil
+    implementation('io.coil-kt:coil:2.5.0')
+
+    //socket io
+    implementation('io.socket:socket.io-client:2.1.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+
+    //persian date
+    implementation 'com.github.samanzamani:PersianDate:1.7.1'
+
+    //round
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    //gson
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
+    // hilt
+    implementation 'com.google.dagger:hilt-android:2.49'
+    kapt 'com.google.dagger:hilt-compiler:2.49'
+
+    //Size
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    //Coroutine
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+
+    // navigation
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.7.5'
+
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+}
+kapt {
+    correctErrorTypes true
+}

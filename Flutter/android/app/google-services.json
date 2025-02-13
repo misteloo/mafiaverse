@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "350627330595",
+    "project_id": "mafia-42bd7",
+    "storage_bucket": "mafia-42bd7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350627330595:android:96412b38766cd1045d0f96",
+        "android_client_info": {
+          "package_name": "ir.greendex.mafia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDisYutSUYG70L1a6zs_MIZR5SrNMg7vTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

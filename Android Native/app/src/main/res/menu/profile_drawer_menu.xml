@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group>
+        <item
+            android:id="@+id/drawerTitleGame"
+            android:title="بازی">
+            <menu>
+                <item
+                    android:id="@+id/drawerMenuGameHistory"
+                    android:icon="@drawable/ic_hat_white"
+                    android:title="تاریخچه بازی ها"
+                    app:iconTint="@color/grey400" />
+            </menu>
+        </item>
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/drawerTitleTransaction"
+            android:title="تراکنش">
+            <menu>
+                <item
+                    android:id="@+id/drawerMenuTransaction"
+                    android:icon="@drawable/round_swap_vert_24"
+                    android:title="تراکنش های من"
+                    app:iconTint="@color/grey400" />
+            </menu>
+        </item>
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/drawerTitleIntroduction"
+            android:title="معرفی">
+            <menu>
+                <item
+                    android:id="@+id/drawerMenuIntroduction"
+                    android:icon="@drawable/round_share_24"
+                    android:title="معرفی به دوستان"
+                    app:iconTint="@color/grey400" />
+            </menu>
+        </item>
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/drawerTitleCommunication"
+            android:title="پشتیبانی">
+            <menu>
+                <item
+                    android:id="@+id/drawerMenuTicket"
+                    android:icon="@drawable/round_contact_support_24"
+                    android:title="ارسال پیام"
+                    app:iconTint="@color/grey400" />
+            </menu>
+        </item>
+    </group>
+    <group>
+        <item
+            android:id="@+id/drawerTitleSocialMedia"
+            android:title="ارتباط با ما">
+            <menu>
+                <item
+                    android:id="@+id/drawerInstagram"
+                    android:icon="@drawable/ic_insta"
+                    android:title="اینستاگرام"
+                    app:iconTint="@color/grey400" />
+                <item
+                    android:id="@+id/drawerWebSite"
+                    android:icon="@drawable/ic_website"
+                    android:title="وب سایت مافیاورس"
+                    app:iconTint="@color/grey400" />
+            </menu>
+
+        </item>
+    </group>
+    <item
+        android:id="@+id/drawerExit"
+        android:icon="@drawable/round_exit_to_app_24"
+        android:title="خروج"
+        app:iconTint="@color/grey400" />
+</menu>

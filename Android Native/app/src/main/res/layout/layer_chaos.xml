@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/layerModerator"
+        layout="@layout/layer_player_day"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btnVotePlayerTwo"
+        app:layout_constraintEnd_toStartOf="@+id/guideline40"
+        app:layout_constraintStart_toStartOf="@+id/guideline99"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline99"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <include
+        android:id="@+id/layerPlayerOne"
+        layout="@layout/layer_player_day"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@+id/layerHandShakePlayerOne"
+        app:layout_constraintEnd_toStartOf="@+id/guideline99"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layerHandShakePlayerOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline41"
+        app:layout_constraintEnd_toStartOf="@+id/guideline99"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline41">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/round_handshake_24"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/round_arrow_downward_24" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/layerPlayerTwo"
+        layout="@layout/layer_player_day"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@+id/layerHandShakePlayerTwo"
+        app:layout_constraintEnd_toStartOf="@+id/guideline40"
+        app:layout_constraintStart_toStartOf="@+id/guideline99" />
+
+    <LinearLayout
+        android:id="@+id/layerHandShakePlayerTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline41"
+        app:layout_constraintEnd_toStartOf="@+id/guideline40"
+        app:layout_constraintStart_toStartOf="@+id/guideline99"
+        app:layout_constraintTop_toTopOf="@+id/guideline41">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/round_handshake_24"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/round_arrow_downward_24" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/layerPlayerThree"
+        layout="@layout/layer_player_day"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@+id/layerHandShakePlayerThree"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline40" />
+
+    <LinearLayout
+        android:id="@+id/layerHandShakePlayerThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline41"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline40"
+        app:layout_constraintTop_toTopOf="@+id/guideline41">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/round_handshake_24"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/round_arrow_downward_24" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnVotePlayerOne"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:alpha="0"
+        android:background="@drawable/style_empty_circle"
+        android:backgroundTint="@color/backgroundBSColor"
+        android:clickable="false"
+        android:src="@drawable/round_handshake_24"
+        app:layout_constraintBottom_toTopOf="@+id/layerPlayerOne"
+        app:layout_constraintEnd_toStartOf="@+id/guideline99"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/white" />
+
+    <ImageButton
+        android:id="@+id/btnVotePlayerTwo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:alpha="0"
+        android:background="@drawable/style_empty_circle"
+        android:backgroundTint="@color/backgroundBSColor"
+        android:clickable="false"
+        android:src="@drawable/round_handshake_24"
+        app:layout_constraintBottom_toTopOf="@+id/layerPlayerTwo"
+        app:layout_constraintEnd_toStartOf="@+id/guideline40"
+        app:layout_constraintStart_toStartOf="@+id/guideline99"
+        app:tint="@color/white" />
+
+    <ImageButton
+        android:id="@+id/btnVotePlayerThree"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:alpha="0"
+        android:background="@drawable/style_empty_circle"
+        android:backgroundTint="@color/backgroundBSColor"
+        android:clickable="false"
+        android:src="@drawable/round_handshake_24"
+        app:layout_constraintBottom_toTopOf="@+id/layerPlayerThree"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline40"
+        app:tint="@color/white" />
+
+    <include
+        android:id="@+id/imgOnVotePlayerOne"
+        layout="@layout/layer_player_day"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/guideline99"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layerHandShakePlayerOne" />
+
+    <include
+        android:id="@+id/imgOnVotePlayerTwo"
+        layout="@layout/layer_player_day"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/guideline40"
+        app:layout_constraintStart_toStartOf="@+id/guideline99"
+        app:layout_constraintTop_toBottomOf="@+id/layerHandShakePlayerTwo" />
+
+    <include
+        android:id="@+id/imgOnVotePlayerThree"
+        layout="@layout/layer_player_day"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline40"
+        app:layout_constraintTop_toBottomOf="@+id/layerHandShakePlayerThree" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_16sdp"
+        android:visibility="invisible"
+        android:id="@+id/linearTurnShake"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgOnVotePlayerTwo">
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/image_timer"/>
+            <TextView
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="در حال تصمیم گیری"
+                android:textColor="@color/textTitleColor" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/layerPlayerShakingTurn"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_gravity="center_horizontal"
+            layout="@layout/layer_player_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline40"
+            app:layout_constraintStart_toStartOf="@+id/guideline99"
+            app:layout_constraintTop_toBottomOf="@+id/imgOnVotePlayerTwo" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+</androidx.constraintlayout.widget.ConstraintLayout>

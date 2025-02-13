@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_8sdp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground"
+    app:cardBackgroundColor="@color/grey700"
+    app:cardCornerRadius="@dimen/_8sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgGroup"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_margin="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/test" />
+
+        <TextView
+            android:id="@+id/txtChannelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:textColor="@color/textMainColor"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imgGroup"
+            app:layout_constraintTop_toTopOf="@+id/imgGroup"
+            tools:text="Mistelo" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:src="@drawable/baseline_cup_24"
+            app:layout_constraintBottom_toBottomOf="@+id/txtChannelName"
+            app:layout_constraintEnd_toStartOf="@+id/txtChannelName"
+            app:layout_constraintTop_toTopOf="@+id/txtChannelName" />
+
+        <TextView
+            android:id="@+id/txtCup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:textColor="@color/textMainColor"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+            app:layout_constraintEnd_toStartOf="@+id/imageView10"
+            app:layout_constraintTop_toTopOf="@+id/imageView10"
+            tools:text="700" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:src="@drawable/baseline_supervisor_account_24"
+            app:layout_constraintBottom_toBottomOf="@+id/imgGroup"
+            app:layout_constraintEnd_toStartOf="@+id/imgGroup"
+            app:tint="@color/grey300" />
+
+        <TextView
+
+            android:id="@+id/txtUserCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:textColor="@color/textMainColor"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+            app:layout_constraintEnd_toStartOf="@+id/imageView11"
+            app:layout_constraintTop_toTopOf="@+id/imageView11"
+            tools:text="200" />
+
+        <Button
+            android:id="@+id/btnSendRequest"
+            style="@style/materialButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:text="عضویت"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/btnSendRequest"
+            app:layout_constraintEnd_toEndOf="@+id/btnSendRequest"
+            app:layout_constraintStart_toStartOf="@+id/btnSendRequest"
+            app:layout_constraintTop_toTopOf="@+id/btnSendRequest" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

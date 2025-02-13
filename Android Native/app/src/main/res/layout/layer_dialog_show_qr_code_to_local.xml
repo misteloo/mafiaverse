@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/style_round_alert_dialog"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/space36">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lineSpacingExtra="8dp"
+            android:padding="@dimen/_8sdp"
+            android:text="1 از بازیکنان بخواهید کد زیر را توسط دستگاه خود برای اتصال به بازی اسکن کنند"
+            android:textColor="@color/textTitleColor" />
+
+        <View
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="1dp"
+            android:background="@color/textTitleColor"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lineSpacingExtra="8dp"
+            android:padding="@dimen/_8sdp"
+            android:text="2 دکمه شروع پخش کارت ، تا زمان اتصال تعداد بازیکنان مشخص شده توسط شما غیر فعال خواهد بود"
+            android:textColor="@color/textTitleColor" />
+
+        <ImageView
+            android:id="@+id/imgQr"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txtCancel"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="@color/textMainColor"
+                android:text="لغو"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_12sdp"
+                android:layout_weight="0.5"
+                android:background="@drawable/style_text_view" />
+
+            <Button
+                android:id="@+id/btnShuffle"
+                style="@style/materialButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_weight="0.5"
+                android:enabled="false"
+                android:text="شروع پخش کارت" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Space
+        android:id="@+id/space36"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout6"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:background="@drawable/style_empty_circle"
+        android:backgroundTint="@color/backgroundBSColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/qr_code" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

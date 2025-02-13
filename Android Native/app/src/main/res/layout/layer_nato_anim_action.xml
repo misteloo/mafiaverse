@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_8sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_8sdp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/grey500"
+            android:src="@drawable/ic_like"
+            app:borderWidth="0dp"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@+id/progressLike"
+            app:layout_constraintEnd_toEndOf="@+id/progressLike"
+            app:layout_constraintStart_toStartOf="@+id/progressLike"
+            app:layout_constraintTop_toTopOf="@+id/progressLike" />
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/progressLike"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            app:cpb_background_progressbar_color="@color/backgroundMainColor"
+            app:cpb_progress_max="5"
+            app:cpb_progressbar_color="@color/red700"
+            app:cpb_round_border="true"
+            app:layout_constraintBottom_toBottomOf="@+id/fabDislike"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toTopOf="@+id/fabDislike" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabDislike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/grey500"
+            android:src="@drawable/ic_dislike"
+            app:borderWidth="0dp"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@+id/progressDislike"
+            app:layout_constraintEnd_toEndOf="@+id/progressDislike"
+            app:layout_constraintStart_toStartOf="@+id/progressDislike"
+            app:layout_constraintTop_toTopOf="@+id/progressDislike" />
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/progressDislike"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            app:cpb_background_progressbar_color="@color/backgroundMainColor"
+            app:cpb_progress_max="5"
+            app:cpb_progressbar_color="@color/red700"
+            app:cpb_round_border="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabChallengeRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/grey500"
+            android:src="@drawable/ic_challeng_req"
+            app:borderWidth="0dp"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@+id/progressChallenge"
+            app:layout_constraintEnd_toEndOf="@+id/progressChallenge"
+            app:layout_constraintStart_toStartOf="@+id/progressChallenge"
+            app:layout_constraintTop_toTopOf="@+id/progressChallenge" />
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/progressChallenge"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            app:cpb_background_progressbar_color="@color/backgroundMainColor"
+            app:cpb_progress_max="15"
+            app:cpb_progressbar_color="@color/red700"
+            app:cpb_round_border="true"
+            app:layout_constraintBottom_toBottomOf="@+id/fabDislike"
+            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/fabDislike" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.66" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.33" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

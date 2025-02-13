@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/gameNatoFragment"
+        android:name="ir.greendex.mafia.game.nato.NatoFragment"
+        android:label="fragment_game_nato"
+        tools:layout="@layout/fragment_nato">
+        <argument
+            android:name="character"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="user_id"
+            app:argType="string" />
+        <argument
+            android:name="join_type"
+            app:argType="string" />
+        <argument
+            android:name="from_reconnect"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <argument
+            android:name="room_id"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="has_game_event"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="users_data"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_gameNatoFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="game_id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="ir.greendex.mafia.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ir.greendex.mafia.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_learnFragment"
+            app:destination="@id/learnFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="ir.greendex.mafia.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/marketFragment"
+        android:name="ir.greendex.mafia.ui.market.MarketFragment"
+        android:label="fragment_market"
+        tools:layout="@layout/fragment_market" />
+    <fragment
+        android:id="@+id/selectCharacterFragment"
+        android:name="ir.greendex.mafia.game.general.SelectCharacterFragment"
+        android:label="fragment_select_character"
+        tools:layout="@layout/fragment_select_character">
+        <argument
+            android:name="game_id"
+            app:argType="string" />
+    </fragment>
+    <action
+        android:id="@+id/action_to_gameNatoFragment"
+        app:destination="@id/gameNatoFragment" />
+    <fragment
+        android:id="@+id/groupListFragment"
+        android:name="ir.greendex.mafia.ui.group.GroupListFragment"
+        android:label="fragment_group_list"
+        tools:layout="@layout/fragment_group_list">
+        <action
+            android:id="@+id/action_groupListFragment_to_groupFragment"
+            app:destination="@id/groupFragment" />
+        <argument
+            android:name="userId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupFragment"
+        android:name="ir.greendex.mafia.ui.group.GroupFragment"
+        android:label="fragment_group"
+        tools:layout="@layout/fragment_group">
+        <argument
+            android:name="group_name"
+            app:argType="string" />
+        <argument
+            android:name="group_id"
+            app:argType="string" />
+        <argument
+            android:name="group_image"
+            app:argType="string" />
+        <argument
+            android:name="token"
+            app:argType="string" />
+        <argument
+            android:name="userId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupDetailFragment"
+        android:name="ir.greendex.mafia.ui.group.GroupDetailFragment"
+        android:label="fragment_group_detail"
+        tools:layout="@layout/fragment_group_detail" >
+        <action
+            android:id="@+id/action_groupDetailFragment_pop_including"
+            app:popUpTo="@id/groupDetailFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="channel_id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/rateFragment"
+        android:name="ir.greendex.mafia.ui.rate.RankFragment"
+        android:label="fragment_rate"
+        tools:layout="@layout/fragment_rank" />
+    <action
+        android:id="@+id/action_global_homeFragment"
+        app:destination="@id/homeFragment" />
+    <action
+        android:id="@+id/action_global_groupListFragment"
+        app:destination="@id/groupListFragment" />
+    <fragment
+        android:id="@+id/reconnectFragment"
+        android:name="ir.greendex.mafia.game.general.ReconnectFragment"
+        android:label="fragment_reconnect"
+        tools:layout="@layout/fragment_reconnect">
+        <argument
+            android:name="character"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="user_id"
+            app:argType="string" />
+        <argument
+            android:name="join_type"
+            app:argType="string" />
+        <argument
+            android:name="game_id"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_reconnectFragment"
+        app:destination="@id/reconnectFragment" />
+    <action android:id="@+id/action_global_groupDetailFragment" app:destination="@id/groupDetailFragment"/><action android:id="@+id/action_global_selectCharacterFragment" app:destination="@id/selectCharacterFragment"/>
+    <action android:id="@+id/action_global_splashFragment" app:destination="@id/splashFragment" />
+    <fragment
+        android:id="@+id/luckyWheelFragment"
+        android:name="ir.greendex.mafia.ui.lucky_wheel.LuckyWheelFragment"
+        android:label="fragment_lucky_wheel"
+        tools:layout="@layout/fragment_lucky_wheel" /><action android:id="@+id/action_global_luckyWheelFragment" app:destination="@id/luckyWheelFragment"/>
+    <fragment
+        android:id="@+id/gameResultFragment"
+        android:name="ir.greendex.mafia.game.general.GameResultFragment"
+        android:label="fragment_game_result"
+        tools:layout="@layout/fragment_game_result" >
+        <action
+            android:id="@+id/action_gameResultFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <action android:id="@+id/action_global_gameResultFragment" app:destination="@id/gameResultFragment" />
+    <fragment
+        android:id="@+id/localGameFragment"
+        android:name="ir.greendex.mafia.ui.local_game.LocalGameFragment"
+        android:label="fragment_local_game"
+        tools:layout="@layout/fragment_local_game" >
+        <action
+            android:id="@+id/action_localGameFragment_to_selectDeckFragment"
+            app:destination="@id/selectDeckFragment" />
+        <action
+            android:id="@+id/action_localGameFragment_to_qrCodeScannerFragment"
+            app:destination="@id/qrCodeScannerFragment" />
+    </fragment>
+    <action android:id="@+id/action_global_localGameFragment" app:destination="@id/localGameFragment" />
+    <fragment
+        android:id="@+id/selectDeckFragment"
+        android:name="ir.greendex.mafia.ui.local_game.SelectDeckFragment"
+        android:label="fragment_select_deck"
+        tools:layout="@layout/fragment_select_deck" />
+    <fragment
+        android:id="@+id/qrCodeScannerFragment"
+        android:name="ir.greendex.mafia.ui.local_game.QrCodeScannerFragment"
+        android:label="fragment_qr_code_scanner"
+        tools:layout="@layout/fragment_qr_code_scanner" />
+    <fragment
+        android:id="@+id/learnFragment"
+        android:name="ir.greendex.mafia.ui.learn.LearnFragment"
+        android:label="fragment_learn"
+        tools:layout="@layout/fragment_learn" />
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="ir.greendex.mafia.ui.transaction.TransactionFragment"
+        android:label="fragment_transaction"
+        tools:layout="@layout/fragment_transaction" /><action android:id="@+id/action_global_transactionFragment" app:destination="@id/transactionFragment"/>
+    <fragment
+        android:id="@+id/totalGamesFragment"
+        android:name="ir.greendex.mafia.ui.game_history.TotalGamesFragment"
+        android:label="fragment_total_games"
+        tools:layout="@layout/fragment_total_games" /><action android:id="@+id/action_global_totalGamesFragment" app:destination="@id/totalGamesFragment"/>
+</navigation>

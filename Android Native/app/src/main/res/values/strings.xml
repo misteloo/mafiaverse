@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Mafia Verse</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_connection">عدم ارتباط ، اتصال به اینترنت را برسی کنید</string>
+    <string name="default_notification_channel_id">1000</string>
+    <string name="at_sign">\@ -</string>
+</resources>

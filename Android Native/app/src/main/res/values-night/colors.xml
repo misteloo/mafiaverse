@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red500">#f44336</color>
+    <color name="orange">#FF9800</color>
+
+    <color name="red700">#d32f2f</color>
+    <color name="blue">#6CA7FF</color>
+    <color name="green800">#43B848</color>
+
+    <color name="grey50">#FAFAFA</color>
+    <color name="grey100">#F5F5F5</color>
+    <color name="grey200">#EEEEEE</color>
+    <color name="grey300">#E0E0E0</color>
+    <color name="grey400">#BDBDBD</color>
+    <color name="grey500">#9E9E9E</color>
+    <color name="grey600">#757575</color>
+    <color name="grey700">#616161</color>
+    <color name="grey800">#424242</color>
+    <color name="grey900">#212121</color>
+
+    <color name="backgroundMainColor">#212121</color>
+    <color name="backgroundBSColor">#616161</color>
+    <color name="textMainColor">#FFFFFFFF</color>
+    <color name="textTitleColor">#BDBDBD</color>
+    <color name="backgroundBSColor80Percent">#CC616161</color>
+
+    <color name="mtrl_textinput_default_box_stroke_color">@color/white</color>
+</resources>

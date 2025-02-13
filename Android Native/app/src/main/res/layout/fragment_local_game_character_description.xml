@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/style_round_bottom_sheet"
+    android:orientation="vertical"
+    tools:context=".ui.local_game.LocalGameCharacterDescriptionFragment">
+
+    <LinearLayout
+        android:layout_margin="@dimen/_16sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/imgClose"
+            app:tint="@color/white"
+            android:src="@drawable/round_close_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_weight="0.9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="توضیح نقش"
+            android:textColor="@color/textMainColor"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:gravity="end">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9">
+            <ImageView
+                android:id="@+id/imgSide"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                tools:src="@drawable/solo_hat"/>
+
+            <TextView
+                android:layout_marginStart="@dimen/_8sdp"
+                tools:text="مستقل"
+                android:id="@+id/txtSide"
+                android:textColor="@color/textMainColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/txtCharacter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:textColor="@color/textMainColor"
+            tools:text="پدرخوانده" />
+
+        <ImageView
+            android:id="@+id/imgCharacter"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            tools:src="@drawable/godfather" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtDesc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_16sdp"
+        android:justificationMode="inter_word"
+        android:scrollbars="vertical"
+        android:textColor="@color/textMainColor"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent molestie eu neque sit amet varius. Aenean porttitor, nibh congue porttitor rutrum, neque turpis scelerisque arcu, eu bibendum tortor leo sed sapien. Nam enim risus, feugiat eu mauris sit amet, porta dignissim lacus. Vivamus eu lorem sed quam viverra tincidunt vel et lacus. Vivamus id nisi nec felis vestibulum rutrum et sit amet ex. Sed vitae metus nisi. Sed a sagittis urna. In faucibus congue felis in consequat. Sed dictum, eros at molestie dictum, lectus est semper sapien, vel blandit ipsum est nec purus. Aenean eget rutrum urna, a hendrerit justo. Etiam in turpis quam. Aenean ac interdum dolor, vitae vulputate quam. Nullam quis nisl sed libero mattis sollicitudin quis non tortor. Morbi sapien mauris, porttitor a tincidunt eu, bibendum at nisi. Suspendisse interdum, urna sed euismod mattis, urna magna vulputate neque, vel vestibulum neque sapien eu sem. Ut ac diam lacinia, euismod est et, ultrices felis.
+
+In luctus mauris ac nunc scelerisque mattis. Fusce luctus a velit sit amet sagittis. Suspendisse potenti. Nullam vel elementum augue, vitae commodo libero. Aliquam pharetra, odio fermentum dapibus fermentum, odio quam condimentum est, a scelerisque nulla augue at nibh. Sed mattis fringilla feugiat. Morbi condimentum varius lorem id lacinia. Donec eget nisl nunc. In condimentum nisi sapien.
+
+Proin tincidunt hendrerit nisi vitae tempor. Integer tristique nisi sit amet justo aliquet, eget dictum mi pulvinar. Mauris scelerisque egestas leo, non placerat nisl congue vel. Cras et sem vel sapien auctor finibus. Vivamus lacinia vulputate leo sit amet elementum. In eleifend libero porttitor, vestibulum tortor iaculis, vehicula magna. Praesent ipsum felis, condimentum sit amet hendrerit sed, bibendum vel lectus. Aenean eget eros sodales, ullamcorper nisi quis, convallis ex. Aliquam finibus quis risus in sollicitudin. Etiam nec augue vitae nisl convallis interdum. Morbi cursus convallis dui, sit amet varius massa posuere imperdiet. Maecenas eros nunc, sagittis at porttitor eget, laoreet ac felis. Quisque finibus placerat tortor. Maecenas ut dignissim elit. Duis vitae semper mi, in aliquam mauris. Praesent pulvinar eros nec mattis interdum.
+
+Pellentesque cursus rhoncus ante et efficitur. Suspendisse quis ultricies nibh, eu blandit dolor. Pellentesque venenatis eleifend erat a porta. Fusce condimentum turpis vitae mi congue, sed facilisis lacus dictum. In non eros velit. Aenean ut varius lorem. Morbi et nisi tristique, viverra quam vitae, mattis ligula. Donec laoreet felis sed ligula ultricies sodales. Integer egestas eros sed sapien elementum lacinia. Nullam justo lorem, mollis quis dictum eget, vulputate at tellus.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consequat dolor eu lorem pulvinar viverra. Nullam pulvinar erat a arcu molestie tincidunt. Vivamus blandit ultricies sodales. Phasellus sit amet risus cursus, interdum justo non, efficitur libero. Curabitur turpis eros, efficitur eu aliquam vestibulum, lacinia et leo. Pellentesque id mauris porta, tempus risus nec, fringilla sem. Morbi sed felis ultrices, rutrum velit ac, vulputate sapien. Suspendisse dolor ipsum, accumsan ac felis a, ultricies euismod eros. Aliquam vulputate ante non posuere mattis. Maecenas in lobortis mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In a dapibus urna, ac scelerisque tortor. Mauris porttitor ex eget feugiat luctus. Nam semper mattis felis, vel lacinia neque facilisis ut.
+
+Curabitur volutpat leo neque, id iaculis magna egestas et. Praesent ut magna vitae tellus viverra commodo quis at risus. Phasellus eu lorem vestibulum, dictum odio nec, eleifend risus. Nunc dapibus ante sed lectus hendrerit sagittis. Ut quis erat porttitor, pharetra nulla ac, aliquet ipsum. Suspendisse imperdiet erat nec ornare facilisis. In eu augue mauris. Aliquam erat volutpat. Aenean gravida enim at elementum ullamcorper. Sed et accumsan dui." />
+</LinearLayout>

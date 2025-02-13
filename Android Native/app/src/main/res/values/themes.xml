@@ -1,0 +1,71 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.Mafia" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/red500</item>
+        <item name="colorPrimaryVariant">@color/red700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/red500</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="fontFamily">@font/font_family</item>
+        <item name="android:windowBackground">@color/backgroundMainColor</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <item name="android:listDivider">@color/grey600</item>
+
+    </style>
+
+    <style name="NavigationDrawerTitleStyle">
+        <item name="android:textColor">@color/textTitleColor</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="NavigationDrawerFont" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/yekan</item>
+    </style>
+
+    <style name="textViewHeader" parent="Widget.MaterialComponents.TextView">
+        <item name="textColor">@color/textMainColor</item>
+        <item name="textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--material bottom style-->
+    <style name="materialButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">12dp</item>
+        <item name="background">@drawable/style_button</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--bottom sheet round style -->
+    <style name="AppBottomSheetDialogTheme" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="android:colorBackground">@color/backgroundBSColor</item>
+        <item name="bottomSheetStyle">@style/BottomSheetRoundModal</item>
+    </style>
+    <!-- bottom sheet modal background transparent -->
+    <style name="BottomSheetRoundModal" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+
+    <!--popup menu rtl-->
+    <style name="popupMenuRtl">
+        <item name="android:layoutDirection">rtl</item>
+    </style>
+
+    <!--floating bottom sheet -->
+    <style name="BottomSheetDialogThemeNoFloating" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+    </style>
+
+    <!-- bottom nav font  -->
+    <style name="BottomNavigationViewTextStyle">
+        ...
+        <item name="android:fontFamily">@font/font_family</item>
+        ...
+    </style>
+</resources>

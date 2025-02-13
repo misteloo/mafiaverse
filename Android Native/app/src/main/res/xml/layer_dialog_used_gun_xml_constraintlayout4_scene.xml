@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/used_gun_end"
+        motion:constraintSetStart="@id/used_gun_start"
+        motion:duration="1000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/used_gun_start">
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/used_gun_end">
+        <Constraint
+            android:id="@+id/imgBullet"
+            motion:layout_constraintEnd_toEndOf="@+id/imgToUser"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            motion:layout_constraintBottom_toBottomOf="@+id/imgToUser"
+            motion:layout_constraintTop_toTopOf="@+id/imgToUser"
+            motion:layout_constraintStart_toStartOf="@+id/imgToUser" />
+    </ConstraintSet>
+    <ConstraintSet
+        android:id="@+id/used_gun_kind"
+        motion:deriveConstraintsFrom="@+id/used_gun_end" >
+        <Constraint
+            android:id="@+id/frameGunKind"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            motion:layout_constraintTop_toTopOf="@+id/imgFromUser"
+            motion:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/used_gun_end"
+        motion:constraintSetEnd="@+id/used_gun_kind"
+        motion:autoTransition="animateToEnd"
+        motion:duration="700" />
+</MotionScene>

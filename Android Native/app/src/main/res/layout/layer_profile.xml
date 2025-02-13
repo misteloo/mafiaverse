@@ -1,0 +1,524 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16sdp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/round_menu_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgUserAvatar"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginEnd="@dimen/_36sdp"
+        android:src="@drawable/mafia_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgMenu" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabChangeAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/grey800"
+        android:src="@drawable/round_edit_24"
+        app:borderWidth="0dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/imgUserAvatar"
+        app:layout_constraintEnd_toEndOf="@+id/imgUserAvatar"
+        app:layout_constraintStart_toStartOf="@+id/imgUserAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/imgUserAvatar" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/anim"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toStartOf="@+id/imgUserAvatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgUserAvatar"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/default_full_body_anim" />
+
+    <TextView
+        android:id="@+id/txtUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:textColor="@color/textMainColor"
+        app:layout_constraintEnd_toEndOf="@+id/imgUserAvatar"
+        app:layout_constraintStart_toStartOf="@+id/imgUserAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/fabChangeAvatar"
+        tools:text="Mistelo" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabChangeUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/grey800"
+        android:src="@drawable/round_edit_24"
+        app:borderWidth="0dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/txtUsername"
+        app:layout_constraintEnd_toStartOf="@+id/txtUsername"
+        app:layout_constraintTop_toTopOf="@+id/txtUsername" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabChangeAnim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/grey800"
+        android:src="@drawable/round_edit_24"
+        app:borderWidth="0dp"
+        app:fabSize="mini"
+        app:layout_constraintEnd_toStartOf="@+id/anim"
+        app:layout_constraintTop_toTopOf="@+id/anim" />
+
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="3dp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@color/grey700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fabChangeUsername" />
+
+
+    <TextView
+        android:id="@+id/textView52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:text="رنکینگ"
+        android:textColor="@color/textTitleColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+    <ImageView
+        android:id="@+id/imgMedalWeekly"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView53"
+        app:layout_constraintEnd_toEndOf="@+id/textView53"
+        app:layout_constraintStart_toStartOf="@+id/textView53"
+        tools:src="@drawable/rate_first_place" />
+
+    <TextView
+        android:id="@+id/textView53"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="هفتگی"
+        android:textColor="@color/textTitleColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline19"
+        app:layout_constraintStart_toStartOf="@+id/guideline19"
+        app:layout_constraintTop_toBottomOf="@+id/textView52" />
+
+
+    <TextView
+        android:id="@+id/txtRankWeekly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:textColor="@color/textMainColor"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline19"
+        app:layout_constraintStart_toStartOf="@+id/guideline19"
+        app:layout_constraintTop_toBottomOf="@+id/textView53"
+        tools:text="500" />
+
+
+    <ImageView
+        android:id="@+id/imgMedalSeasonally"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgMedalWeekly"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/imgMedalWeekly"
+        tools:src="@drawable/rate_second_place" />
+
+    <TextView
+        android:id="@+id/textView54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:text="فصلی"
+        android:textColor="@color/textTitleColor"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView53"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/textView53" />
+
+
+    <TextView
+        android:id="@+id/txtRankSeasonally"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:textColor="@color/textMainColor"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textView54"
+        tools:text="320" />
+
+    <ImageView
+        android:id="@+id/imgMedalTotally"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView54"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline16"
+        app:layout_constraintTop_toTopOf="@+id/imgMedalSeasonally"
+        tools:src="@drawable/rate_place_3" />
+
+
+    <TextView
+        android:id="@+id/textView55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="کلی"
+        android:textColor="@color/textTitleColor"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView53"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline16"
+        app:layout_constraintTop_toTopOf="@+id/textView53" />
+
+
+    <TextView
+        android:id="@+id/txtRankTotally"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textMainColor"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtRankSeasonally"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline16"
+        app:layout_constraintTop_toTopOf="@+id/txtRankSeasonally"
+        tools:text="65" />
+
+    <View
+        android:layout_marginTop="@dimen/_16sdp"
+        android:id="@+id/view6"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="3dp"
+        android:background="@color/grey700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRankWeekly" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:text="عملکرد"
+        android:textColor="@color/textTitleColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="ساید مافیا"
+        android:textColor="@color/textMainColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/mafia_hat"
+        app:layout_constraintBottom_toTopOf="@+id/textView22"
+        app:layout_constraintEnd_toEndOf="@+id/textView22"
+        app:layout_constraintStart_toStartOf="@+id/textView22" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ساید شهروند"
+        android:textColor="@color/textMainColor"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView22"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView22" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/citizen_hat"
+        app:layout_constraintBottom_toTopOf="@+id/textView31"
+        app:layout_constraintEnd_toEndOf="@+id/textView31"
+        app:layout_constraintStart_toStartOf="@+id/textView31" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:text="تعداد بازی"
+        android:textColor="@color/textTitleColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline19"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+    <TextView
+        android:id="@+id/txtMafiaGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textMainColor"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView46"
+        app:layout_constraintEnd_toStartOf="@+id/guideline19"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/textView46"
+        tools:text="500" />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/progressMafiaWin"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:cpb_background_progressbar_color="@android:color/transparent"
+        app:cpb_progress_max="100"
+        app:cpb_progressbar_color="@color/red700"
+        app:cpb_round_border="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/txtMafiaGame"
+        tools:cpb_progress="50" />
+
+    <TextView
+        android:id="@+id/txtMafiaWinPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textMainColor"
+        app:layout_constraintBottom_toBottomOf="@+id/progressMafiaWin"
+        app:layout_constraintEnd_toEndOf="@+id/progressMafiaWin"
+        app:layout_constraintStart_toStartOf="@+id/progressMafiaWin"
+        app:layout_constraintTop_toTopOf="@+id/progressMafiaWin"
+        tools:text="25 %" />
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="تعداد بازی"
+        android:textColor="@color/textTitleColor"
+        app:layout_constraintBottom_toBottomOf="@+id/textView46"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline16"
+        app:layout_constraintTop_toTopOf="@+id/textView46" />
+
+    <TextView
+        android:id="@+id/txtCitizenGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textMainColor"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtMafiaGame"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtMafiaGame"
+        tools:text="630" />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/progressCitizenWin"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        app:cpb_background_progressbar_color="@android:color/transparent"
+        app:cpb_progress_max="100"
+        app:cpb_progressbar_color="@color/red700"
+        app:cpb_round_border="true"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/progressMafiaWin"
+        tools:cpb_progress="63" />
+
+    <TextView
+        android:id="@+id/txtCitizenWinPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="63 %"
+        android:textColor="@color/textMainColor"
+        app:layout_constraintBottom_toBottomOf="@+id/progressCitizenWin"
+        app:layout_constraintEnd_toEndOf="@+id/progressCitizenWin"
+        app:layout_constraintStart_toStartOf="@+id/progressCitizenWin"
+        app:layout_constraintTop_toTopOf="@+id/progressCitizenWin" />
+
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="3dp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@color/grey700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressCitizenWin" />
+
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:text="بازخورد  ( 25 بازی اخیر شما )"
+        android:textColor="@color/textTitleColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+    <TextView
+        android:id="@+id/textView49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="ترک بازی"
+        android:textColor="@color/textTitleColor"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline19"
+        app:layout_constraintStart_toStartOf="@+id/guideline19"
+        app:layout_constraintTop_toBottomOf="@+id/textView48" />
+
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/progressAbandon"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:cpb_background_progressbar_color="@android:color/transparent"
+        app:cpb_progressbar_color="@color/red700"
+        app:cpb_round_border="true"
+        app:layout_constraintEnd_toStartOf="@+id/guideline19"
+        app:layout_constraintStart_toStartOf="@+id/guideline19"
+        app:layout_constraintTop_toBottomOf="@+id/textView49"
+        tools:cpb_progress="15" />
+
+    <TextView
+        android:id="@+id/txtAbandonGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textMainColor"
+        app:layout_constraintBottom_toBottomOf="@+id/progressAbandon"
+        app:layout_constraintEnd_toEndOf="@+id/progressAbandon"
+        app:layout_constraintStart_toStartOf="@+id/progressAbandon"
+        app:layout_constraintTop_toTopOf="@+id/progressAbandon"
+        tools:text="0" />
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="گزارش رفتاری"
+        android:textColor="@color/textTitleColor"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/textView49" />
+
+    <TextView
+        android:id="@+id/textView51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="گزارش افشای نقش"
+        android:textColor="@color/textTitleColor"
+        app:layout_constraintBottom_toBottomOf="@+id/textView50"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline16"
+        app:layout_constraintTop_toTopOf="@+id/textView50" />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/progressComReport"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        app:cpb_background_progressbar_color="@android:color/transparent"
+        app:cpb_progress_max="100"
+        app:cpb_progressbar_color="@color/red700"
+        app:cpb_round_border="true"
+        app:layout_constraintBottom_toBottomOf="@+id/progressAbandon"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/progressAbandon"
+        tools:cpb_progress="32" />
+
+    <TextView
+        android:id="@+id/txtComReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textMainColor"
+        app:layout_constraintBottom_toBottomOf="@+id/progressComReport"
+        app:layout_constraintEnd_toEndOf="@+id/progressComReport"
+        app:layout_constraintStart_toStartOf="@+id/progressComReport"
+        app:layout_constraintTop_toTopOf="@+id/progressComReport"
+        tools:text="22" />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/progressRoleReport"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        app:cpb_background_progressbar_color="@android:color/transparent"
+        app:cpb_progressbar_color="@color/red700"
+        app:cpb_round_border="true"
+        app:layout_constraintBottom_toBottomOf="@+id/progressComReport"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline16"
+        app:layout_constraintTop_toTopOf="@+id/progressComReport"
+        tools:cpb_progress="12" />
+
+    <TextView
+        android:id="@+id/txtRoleReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textMainColor"
+        app:layout_constraintBottom_toBottomOf="@+id/progressRoleReport"
+        app:layout_constraintEnd_toEndOf="@+id/progressRoleReport"
+        app:layout_constraintStart_toStartOf="@+id/progressRoleReport"
+        app:layout_constraintTop_toTopOf="@+id/progressRoleReport"
+        tools:text="95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

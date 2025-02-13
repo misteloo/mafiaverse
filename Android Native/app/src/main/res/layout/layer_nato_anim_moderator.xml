@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_8sdp"
+    app:cardCornerRadius="@dimen/_8sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_8sdp">
+
+        <TextView
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="پنل"
+            android:textColor="@color/textMainColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="شات گرداننده"
+            android:textColor="@color/textTitleColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView21" />
+
+        <TextView
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="میکروفون"
+            android:textColor="@color/textTitleColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView21" />
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fabModeratorMicStatus"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/grey500"
+            android:text="روشن"
+            app:borderWidth="0dp"
+            app:icon="@drawable/round_mic_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fabForceKick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="فعال کردن شات"
+            app:icon="@drawable/ic_pistol"
+            app:layout_constraintBottom_toBottomOf="@+id/fabModeratorMicStatus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/fabModeratorMicStatus" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

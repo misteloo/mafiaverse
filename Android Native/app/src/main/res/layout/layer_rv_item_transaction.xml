@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_8sdp"
+    app:cardBackgroundColor="@color/grey700"
+    app:cardCornerRadius="@dimen/_8sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:textColor="@color/textMainColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="1402 / 09 / 01" />
+
+
+        <TextView
+            android:id="@+id/textView60"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:textColor="@color/textTitleColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="محصول :" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:textColor="@color/textMainColor"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView60"
+            app:layout_constraintEnd_toStartOf="@+id/textView60"
+            app:layout_constraintTop_toTopOf="@+id/textView60"
+            tools:text="خرید سکه" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/productImage"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_margin="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+            tools:src="@drawable/gold" />
+
+
+        <ImageView
+            android:id="@+id/imgDevice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/round_phone_iphone_24" />
+
+        <TextView
+            android:id="@+id/txtDevice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:textColor="@color/textMainColor"
+            app:layout_constraintBottom_toBottomOf="@+id/imgDevice"
+            app:layout_constraintStart_toEndOf="@+id/imgDevice"
+            app:layout_constraintTop_toTopOf="@+id/imgDevice"
+            tools:text="برنامه" />
+
+        <LinearLayout
+            android:id="@+id/layerCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/productImage"
+            app:layout_constraintTop_toTopOf="@+id/productImage">
+
+            <TextView
+                android:id="@+id/txtGold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:textColor="@color/textMainColor"
+                app:layout_constraintEnd_toStartOf="@+id/productImage"
+                app:layout_constraintTop_toTopOf="@+id/productImage"
+                tools:text="25 سکه" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="تعداد :"
+                android:textColor="@color/textTitleColor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:id="@+id/layerPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/productImage"
+            app:layout_constraintEnd_toStartOf="@+id/productImage">
+
+            <TextView
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:id="@+id/txtPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textMainColor"
+                android:textSize="15sp"
+                tools:text="10,000 تومان" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="مبلغ :"
+                android:textColor="@color/textTitleColor" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

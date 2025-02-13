@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Space
+        android:id="@+id/space24"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/rootMotion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/style_round_alert_dialog"
+        app:layoutDescription="@xml/layer_dialog_used_gun_xml_constraintlayout4_scene"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/space24">
+
+        <Space
+            android:id="@+id/space25"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ImageView
+            android:id="@+id/imgBullet"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/ic_bullet"
+            app:layout_constraintBottom_toBottomOf="@+id/imgFromUser"
+            app:layout_constraintEnd_toEndOf="@+id/imgFromUser"
+            app:layout_constraintStart_toStartOf="@+id/imgFromUser"
+            app:layout_constraintTop_toTopOf="@+id/imgFromUser" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgFromUser"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline36"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/space25"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/txtFromUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:textColor="@color/textMainColor"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imgFromUser"
+            app:layout_constraintStart_toStartOf="@+id/imgFromUser"
+            app:layout_constraintTop_toBottomOf="@+id/imgFromUser"
+            tools:text="محمد" />
+
+        <TextView
+            android:id="@+id/txtToUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:textColor="@color/textMainColor"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imgToUser"
+            app:layout_constraintStart_toStartOf="@+id/imgToUser"
+            app:layout_constraintTop_toBottomOf="@+id/imgToUser"
+            tools:text="فربود" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgToUser"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline36"
+            app:layout_constraintTop_toBottomOf="@+id/space25"
+            tools:src="@tools:sample/avatars" />
+
+        <LinearLayout
+            android:id="@+id/frameGunKind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgFromUser">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgGunKind"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/space25"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/txtGunKind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:textColor="@color/textMainColor"
+                tools:text="جنگی" />
+        </LinearLayout>
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:background="@drawable/style_empty_circle"
+        android:backgroundTint="@color/backgroundBSColor"
+        android:padding="@dimen/_8sdp"
+        android:rotationY="180"
+        android:src="@drawable/pistole"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/space24" />
+</androidx.constraintlayout.widget.ConstraintLayout>

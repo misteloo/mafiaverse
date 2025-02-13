@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_8sdp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground"
+    app:cardBackgroundColor="@color/grey800"
+    app:cardCornerRadius="@dimen/_8sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/txtUserIndex"
+            android:layout_width="4dp"
+            android:layout_height="16dp"
+            android:background="@color/grey500"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:textColor="@color/textTitleColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1" />
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="@dimen/_100sdp"
+            app:cardBackgroundColor="@color/grey500"
+            android:id="@+id/imgUser"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_margin="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txtUserIndex"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <View
+            android:background="@color/grey500"
+            android:id="@+id/txtUsername"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:textColor="@color/textMainColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgUser"
+            app:layout_constraintEnd_toStartOf="@+id/imgUser"
+            app:layout_constraintTop_toTopOf="@+id/imgUser"
+            tools:text="Mistelo" />
+
+        <ImageView
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:id="@+id/imageView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:src="@drawable/baseline_cup_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/txtCup"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="@color/grey500"
+            android:textColor="@color/textMainColor"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+            app:layout_constraintStart_toEndOf="@+id/imageView16"
+            app:layout_constraintTop_toTopOf="@+id/imageView16"
+            tools:text="5400" />
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:src="@drawable/gold"
+            app:layout_constraintBottom_toBottomOf="@+id/txtCup"
+            app:layout_constraintStart_toEndOf="@+id/txtCup"
+            app:layout_constraintTop_toTopOf="@+id/txtCup" />
+
+        <View
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="@color/grey500"
+            android:textColor="@color/textMainColor"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView18"
+            app:layout_constraintStart_toEndOf="@+id/imageView18"
+            app:layout_constraintTop_toTopOf="@+id/imageView18"
+            tools:text="5400" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
