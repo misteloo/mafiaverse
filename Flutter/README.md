@@ -1,6 +1,6 @@
 
 ### In App Billing
-- Mykey
+- Myket
 - Cafee bazzar
 ### Dependencies
 - Socket io
